@@ -1,0 +1,54 @@
+[
+    {
+        "tipo": "guerrero",
+        "nombre": "Thor",
+        "vida": 100,
+        "ataque": 45,
+        "defensa": 40,
+        "gritoActivo": false,
+        "arma": {
+            "nombre": "Mjolnir",
+            "tipo": "martillo",
+            "danio": 50
+        }
+    },
+    {
+        "tipo": "guerrero",
+        "nombre": "Ares",
+        "vida": 90,
+        "ataque": 40,
+        "defensa": 35,
+        "gritoActivo": true,
+        "arma": {
+            "nombre": "Espada de Ares",
+            "tipo": "espada",
+            "danio": 45
+        }
+    },
+    {
+        "tipo": "mago",
+        "nombre": "Gandalf",
+        "vida": 85,
+        "ataque": 35,
+        "defensa": 25,
+        "mana": 90,
+        "arma": {
+            "nombre": "B\u00e1culo de Gandalf",
+            "tipo": "b\u00e1culo",
+            "danio": 30
+        }
+    },
+    {
+        "tipo": "mago",
+        "nombre": "Merlin",
+        "vida": 100,
+        "ataque": 40,
+        "defensa": 20,
+        "mana": 100,
+        "arma": {
+            "nombre": "B\u00e1culo de Merlin",
+            "tipo": "b\u00e1culo",
+            "danio": 20
+        }
+    }
+]
