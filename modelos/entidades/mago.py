@@ -6,15 +6,6 @@ class Mago(Personaje):
     MAX_MANA=100
     PORCENTAJE_AUMENTO_ATAQUE=0.3
 
-    @classmethod
-    def fromDiccionario(cls, diccionario: dict):
-        """Crea un mago a partir de un diccionario."""
-        nuevo_mago = Mago(diccionario["nombre"], diccionario["ataque"], diccionario["defensa"])
-        nuevo_mago.establecerVida(diccionario["vida"])
-        nuevo_mago.establecerMana(diccionario["mana"])
-        if "arma" in diccionario and diccionario["arma"] != None:
-            nuevo_mago.establecerArma(Arma.fromDiccionario(diccionario["arma"]))
-        return nuevo_mago
 
     def __init__(self, nombre:str, ataque:int, defensa:int):
         """Inicializa los atributos de un mago."""
@@ -57,14 +48,4 @@ class Mago(Personaje):
 
     def __str__(self) -> str:
         return f"{super().__str__()}, Mana: {self.__mana}"
-    
-    def toDiccionario(self):
-        return {
-            "tipo": "mago",
-            "nombre": self._nombre,
-            "vida": self._vida,
-            "ataque": self._ataque,
-            "defensa": self._defensa,
-            "mana": self.__mana,
-            "arma": self._arma.toDiccionario() if self._arma != None else None
-        }
+

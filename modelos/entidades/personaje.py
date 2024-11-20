@@ -2,7 +2,6 @@ from modelos.entidades.arma import Arma   # Importamos la clase Arma desde el ar
 from modelos.entidades.cajaSorpresa import CajaSorpresa, Caracteristica   # Importamos la clase CajaSorpresa desde el archivo CajaSorpresa.py
 
 class Personaje:
-    # Atributos de clase
     MAX_VIDA = 100
     MAX_ATAQUE = 50
     MAX_DEFENSA = 45
@@ -12,7 +11,7 @@ class Personaje:
 
     def __init__(self, nombre:str, ataque:int, defensa:int):
         """
-        Inicializa un nuevo personaje.
+        Inicializa un nuevo personaje con el maximo de vida.
         
         Parámetros:
         - nombre: El nombre del personaje.

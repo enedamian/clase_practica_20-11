@@ -4,15 +4,6 @@ from modelos.entidades.arma import Arma
 class Guerrero(Personaje):
     DANIO_GRITO = 15
 
-    @classmethod
-    def fromDiccionario(cls, diccionario: dict):
-        """Crea un guerrero a partir de un diccionario."""
-        nuevo_guerrero = Guerrero(diccionario["nombre"], diccionario["ataque"], diccionario["defensa"])
-        nuevo_guerrero.establecerVida(diccionario["vida"])
-        nuevo_guerrero.establecerGritoActivo(diccionario["gritoActivo"])
-        if "arma" in diccionario and diccionario["arma"] != None:
-            nuevo_guerrero.establecerArma(Arma.fromDiccionario(diccionario["arma"]))
-        return nuevo_guerrero
 
     def __init__(self, nombre:str, ataque:int, defensa:int):
         """Inicializa los atributos de un guerrero."""
@@ -65,14 +56,3 @@ class Guerrero(Personaje):
                         self._vida -= int((valorAtaque-self._defensa)/2)
         else:
             raise ValueError("El valor de ataque debe ser un número entero positivo.")
-        
-    def toDiccionario(self):
-        return {
-            "tipo": "guerrero",
-            "nombre": self._nombre,
-            "vida": self._vida,
-            "ataque": self._ataque,
-            "defensa": self._defensa,
-            "gritoActivo": self.__gritoActivo,
-            "arma": self._arma.toDiccionario() if self._arma != None else None
-        }

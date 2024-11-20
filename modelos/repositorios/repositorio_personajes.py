@@ -51,32 +51,5 @@ class RepositorioPersonajes:
                 return True
         return False
 
-    def agregar(self, personaje):
-        if not isinstance(personaje, Guerrero) and not isinstance(personaje, Mago):
-            raise ValueError("El personaje a agregar debe ser de tipo Guerrero o Mago.\nTipo: "+str(type(personaje)))
-        if self.existeNombre(personaje.obtenerNombre()):
-            raise ValueError("Ya existe un personaje con el mismo nombre.")
-        self.__personajes.append(personaje)
-        self.__guardarTodos()
 
-    def eliminar(self, nombre:str):
-        if not isinstance(nombre, str) or nombre == "" or nombre.isspace():
-            raise ValueError("El nombre debe ser un string válido.")
-        for personaje in self.__personajes:
-            if personaje.obtenerNombre() == nombre:
-                self.__personajes.remove(personaje)
-                self.__guardarTodos()
-                return
-    
-    def modificar(self, nombre:str, personaje_modificado: Personaje):
-        if not isinstance(nombre, str) or nombre == "" or nombre.isspace():
-            raise ValueError("El nombre debe ser un string válido.")
-        if not isinstance(personaje_modificado, Guerrero) and not isinstance(personaje_modificado, Mago):
-            raise ValueError("El personaje debe ser de tipo Guerrero o Mago.")
-        for personaje in self.__personajes:
-            if personaje.obtenerNombre() == nombre:
-                self.__personajes.remove(personaje)
-                self.__personajes.append(personaje_modificado)
-                self.__guardarTodos()
-                return 
     
