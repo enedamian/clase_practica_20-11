@@ -27,7 +27,7 @@ Marlín comenzó a desarrollar la API pero no la terminó. Tu tarea es completar
 ### Requisitos
 
 - Revisa el código existente y completa las funciones faltantes.
-- Asegúrate de que todas las operaciones CRUD funcionen correctamente.
-- Corrige cualquier error que encuentres en la implementación actual y documenta los cambios realizados.
+- Asegurate de que todas las operaciones CRUD funcionen correctamente. Para ello deberás crear el entorno virtual, activarlo e instalarle Flask.
+- Corregí cualquier error que encuentres en la implementación actual y documentá los cambios realizados.
 
 ¡Buena suerte y manos a la obra!
