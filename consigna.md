@@ -22,7 +22,7 @@ Los personajes están modelados de la siguiente manera:
 
 ### Tarea
 
-Marlín comenzó a desarrollar la API pero no la terminó. Tu tarea es completar lo que falta para ofrecer operaciones CRUD sobre el recurso "Personajes" y corregir los errores que cometió Merlín. Donde corrijas un error, agrega un comentario indicando el error corregido.
+Merlín comenzó a desarrollar la API pero no la terminó. Tu tarea es completar lo que falta para ofrecer operaciones CRUD sobre el recurso "Personajes" y corregir los errores que cometió Merlín. Donde corrijas un error, agrega un comentario indicando el error corregido.
 
 ### Requisitos
 
